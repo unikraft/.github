@@ -9,7 +9,7 @@
   </a>
 </p>
 
-### Unikraft is an automated system for building specialized POSIX-compliant OSes known as unikernels**; these images are tailored to the needs of specific applications.
+### Unikraft is an automated system for building specialized POSIX-compliant OSes known as unikernels; these images are tailored to the needs of specific applications.
 
 Unikraft is based around the concept of small, modular libraries, each providing a part of the functionality commonly found in an operating system (e.g., memory allocation, scheduling, filesystem support, network stack, etc.).
 
