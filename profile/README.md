@@ -9,7 +9,8 @@
   </a>
 </p>
 
-**Unikraft is an automated system for building specialized POSIX-compliant OSes known as unikernels**; these images are tailored to the needs of specific applications.
+### Unikraft is an automated system for building specialized POSIX-compliant OSes known as unikernels**; these images are tailored to the needs of specific applications.
+
 Unikraft is based around the concept of small, modular libraries, each providing a part of the functionality commonly found in an operating system (e.g., memory allocation, scheduling, filesystem support, network stack, etc.).
 
 Unikraft supports multiple target platforms (e.g., Xen, KVM, and Linux userspace) so that it is possible to build multiple images, one for each platform, for a single application without requiring the application developer to do any additional, platform-specific work.
@@ -20,23 +21,23 @@ In all, Unikraft is able to build specialized OSes and unikernels targeted at sp
 
 Unikraft is a new system for ultra-light virtualization of your services in the cloud or at the edge, as well as extremely efficient software stacks to run bare metal on embedded devices. Smaller, quicker, and way more efficient than conventional systems:
 
-**⚡  Cold boot virtual machines in a fraction of a second**
+### ⚡ Cold boot virtual machines in a fraction of a second
 
 While Linux-based systems might take tens of seconds to boot, Unikraft will be up in a blink.
 
-**📈 Deploy significantly more instances per physical machine**
+### 📈 Deploy significantly more instances per physical machine
 
 Don't waste CPU cycles on unneeded functionality – focus on your users' needs.
 
-**📉 Drastic reductions in memory consumption**
+### 📉 Drastic reductions in memory consumption
 
 With all your applications and data strongly separated into ultra light-weight virtual machines, scaling becomes a breeze.
 
-**🛡️ Ready for mission critical deployments**
+### 🛡️ Ready for mission critical deployments
 
 Focus your trust on a minimal set of required components, significantly reduce your service's attack surface, and minimize certification costs.
 
-**🚀 Outstanding performance**
+### 🚀 Outstanding performance
 
 Specializing the OS to meet your application's needs is the key to achieving superior performance, making you ready to drive your infrastructure to the peak.
 
