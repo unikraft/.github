@@ -7,6 +7,9 @@
   <a href="https://bit.ly/UnikraftDiscord">
     <img src="https://img.shields.io/discord/762976922531528725.svg?label=discord&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" />
   </a>
+  <a href="https://twitter.com/UnikraftSDK">
+    <img src="https://img.shields.io/twitter/follow/UnikraftSDK?style=social&logo=twitter" />
+  </a>
 </p>
 
 ### Unikraft is an automated system for building specialized POSIX-compliant OSes known as unikernels; these images are tailored to the needs of specific applications.
