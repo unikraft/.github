@@ -59,5 +59,5 @@ We recommend to choose a focus area first to get started:
 ## Community
 
 Looking to get involved? [Contributions are welcome](https://unikraft.org/docs/contributing)!
-There are [weekly communitiy meetings](https://unikraft.org/community/meetings) on [our Discord server](https://bit.ly/UnikraftDiscord) which follow [on-going projects](https://github.com/unikraft/unikraft/issues?q=is%3Aissue+is%3Aopen+label%3Alifecycle%2Factive).
+There are [weekly community events](https://unikraft.org/community/events) on [our Discord server](https://bit.ly/UnikraftDiscord) which follow [on-going projects](https://github.com/unikraft/unikraft/issues?q=is%3Aissue+is%3Aopen+label%3Alifecycle%2Factive).
 There are also [unclaimed projects](https://github.com/unikraft/unikraft/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fproject), [open issues](https://github.com/unikraft/unikraft/issues), and opportunities for [bachelors and masters theses](https://unikraft.org/community/contacts/).
