@@ -1,46 +1,115 @@
+<div align="center">
+  <picture>
+    <img alt="Unikraft logo" src="https://raw.githubusercontent.com/unikraft/docs/main/static/assets/imgs/unikraft.svg" width="40%">
+  </picture>
+</div>
+
+<br />
+
+<div align="center">
+
+[![](https://img.shields.io/badge/version-v0.17.0%20(Calypso)-%23EC591A)](https://github.com/unikraft/unikraft/tree/staging)
+[![](https://img.shields.io/static/v1?label=license&message=BSD-3&color=%23385177)](https://github.com/unikraft/unikraft/blob/staging/COPYING.md)
+[![](https://img.shields.io/discord/762976922531528725.svg?label=discord&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://unikraft.org/discord)
+[![](https://img.shields.io/github/contributors/unikraft/unikraft)](https://github.com/unikraft/unikraft/graphs/contributors)
+[![](https://app.codacy.com/project/badge/Grade/454f62251d96413fac8024b28df2ce5b)](https://app.codacy.com/gh/unikraft/unikraft/dashboard)
+
+</div>
+
+<h1 align="center">The fast, secure and open-source <br /> Unikernel Development Kit</h1>
+
+<div align="center">
+	Unikraft powers the next-generation of cloud native, containerless applications by enabling you to radically customize and build custom OS/kernels; unlocking best-in-class performance, security primitives and efficiency savings.
+</div>
+
+<br />
+
 <p align="center">
-  <img src="https://unikraft.org/assets/imgs/unikraft.svg" width="215" alt="Unikraft - Fast, Secure and Open-Source Unikernel Development Kit" />
+	<a href="https://unikraft.org">Homepage</a>
+	·
+	<a href="https://unikraft.org/docs">Documentation</a>
+	·
+	<a href="https://github.com/unikraft/unikraft/issues/new?assignees=&labels=kind%2Fbug&projects=&template=bug_report.yml">Report Bug</a>
+	·
+	<a href="https://github.com/unikraft/unikraft/issues/new?assignees=&labels=kind%2Fenhancement&projects=&template=project_backlog.yml">Feature Request</a>
+	·
+	<a href="https://unikraft.org/discord">Join Our Discord</a>
+	·
+	<a href="https://x.com/UnikraftSDK">X.com</a>
 </p>
-<p align="center">
-  <img src="https://img.shields.io/github/contributors/unikraft/unikraft" />
-  <img src="https://img.shields.io/static/v1?label=license&message=BSD-3&color=%23385177" />
-  <a href="https://bit.ly/UnikraftDiscord">
-    <img src="https://img.shields.io/discord/762976922531528725.svg?label=discord&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" />
-  </a>
-</p>
 
-### Unikraft is an automated system for building specialized POSIX-compliant OSes known as unikernels; these images are tailored to the needs of specific applications.
+<br />
 
-Unikraft is based around the concept of small, modular libraries, each providing a part of the functionality commonly found in an operating system (e.g., memory allocation, scheduling, filesystem support, network stack, etc.).
+<div align="center">
+	<img src="https://unikraft.org/assets/imgs/monkey-business.gif" width="80%" />
+</div>
 
-Unikraft supports multiple target platforms (e.g., Xen, KVM, and Linux userspace) so that it is possible to build multiple images, one for each platform, for a single application without requiring the application developer to do any additional, platform-specific work.
-In all, Unikraft is able to build specialized OSes and unikernels targeted at specific applications without requiring the time-consuming, expert work that is required today to build such images.
+<br />
+
+## Features
+
+- **Instantaneous Cold-boots** ⚡
+   - While Linux-based systems might take tens of seconds to boot, Unikraft will be up in milliseconds.
+
+- **Modular Design** 🧩
+   - Unikraft boasts a modular design approach, allowing developers to include only necessary components, resulting in leaner and more efficient operating system configurations.
+
+- **Optimized for Performance** 🚀
+   - Built for performance, Unikraft minimizes overheads and leverages platform-specific optimizations, ensuring applications achieve peak performance levels.
+
+- **Flexible Architecture Support** 💻
+   - With support for multiple hardware architectures including x86, ARM, (and soon RISC-V), Unikraft offers flexibility in deployment across diverse hardware platforms.
+
+- **Broad Language and Application Support** 📚
+
+  - Unikraft offers extensive support for multiple programming languages and hardware architectures, providing developers with the flexibility to choose the tools and platforms that best suit your needs.
+
+- **Cloud and Edge Compatibility** ☁️
+   - Designed for cloud and edge computing environments, Unikraft enables seamless deployment of applications across distributed computing infrastructures.
+
+- **Reduced Attack Surface** 🛡️
+   - By selectively including only necessary components, Unikraft reduces the attack surface, enhancing security in deployment scenarios.  Unikraft also includes many [additional modern security features][unikraft-security-features].
+
+- **Developer Friendly** 🛠️
+   - Unikraft's intuitive toolchain and user-friendly interface simplify the development process, allowing developers to focus on building innovative solutions.
+
+- **Efficient Resource Utilization** 🪶
+   - Unikraft optimizes resource utilization, leading to smaller footprints (meaning higher server saturation) and improved efficiency in resource-constrained environments.
+
+- **Community-Driven Development** 👥
+    - Unikraft is an open-source project driven by a vibrant community of over 100 developers, fostering collaboration and innovation from industry and academia.
 
 
-## Typical Use Cases
+## Quick Start
 
-Unikraft is a new system for ultra-light virtualization of your services in the cloud or at the edge, as well as extremely efficient software stacks to run bare metal on embedded devices. Smaller, quicker, and way more efficient than conventional systems:
+Install the companion command-line client [`kraft`][kraft]:
 
-### ⚡ Cold boot virtual machines in a fraction of a second
+```shell
+# Install on macOS, Linux, and Windows:
+curl -sSfL https://get.kraftkit.sh | sh
+```
 
-While Linux-based systems might take tens of seconds to boot, Unikraft will be up in a blink.
+> See [additional installation instructions][unikraft-cli-install].
 
-### 📈 Deploy significantly more instances per physical machine
+Run your first ultra-lightweight unikernel virtual machine:
 
-Don't waste CPU cycles on unneeded functionality – focus on your users' needs.
+```
+kraft run unikraft.org/helloworld:latest
+```
 
-### 📉 Drastic reductions in memory consumption
+View its status and manage multiple instances:
 
-With all your applications and data strongly separated into ultra light-weight virtual machines, scaling becomes a breeze.
+```
+kraft ps --all
+```
 
-### 🛡️ Ready for mission critical deployments
+View the community image catalog in your CLI for more apps:
 
-Focus your trust on a minimal set of required components, significantly reduce your service's attack surface, and minimize certification costs.
+```
+kraft pkg ls --update --apps
+```
 
-### 🚀 Outstanding performance
-
-Specializing the OS to meet your application's needs is the key to achieving superior performance, making you ready to drive your infrastructure to the peak.
-
+Or browse through one of the many [starter example projects][unikraft-catalog-examples].
 
 ## Get Started
 
@@ -61,3 +130,24 @@ We recommend to choose a focus area first to get started:
 Looking to get involved? [Contributions are welcome](https://unikraft.org/docs/contributing)!
 There are [weekly communitiy meetings](https://unikraft.org/community/meetings) on [our Discord server](https://bit.ly/UnikraftDiscord) which follow [on-going projects](https://github.com/unikraft/unikraft/issues?q=is%3Aissue+is%3Aopen+label%3Alifecycle%2Factive).
 There are also [unclaimed projects](https://github.com/unikraft/unikraft/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fproject), [open issues](https://github.com/unikraft/unikraft/issues), and opportunities for [bachelors and masters theses](https://unikraft.org/community/contacts/).
+
+
+
+## Affiliation
+
+Unikraft is a member of the [Linux Foundation](https://www.linuxfoundation.org/) and is a [Xen Project](https://xenproject.org/)  Incubator Project.
+The Unikraft name, logo and its mascot are trademark of [Unikraft GmbH](https://unikraft.io).
+
+<br />
+
+<div align="left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://www.linuxfoundation.org/hubfs/lf-stacked-white.svg">
+    <img alt="LinuxFoundation logo" src="https://www.linuxfoundation.org/hubfs/lf-stacked-color.svg" width="20%">
+  </picture>
+	&nbsp;&nbsp;&nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://xenproject.org/wp-content/uploads/sites/79/2018/09/logo_xenproject.png">
+    <img alt="XenProject logo" src="https://downloads.xenproject.org/Branding/Logos/Green+Black/xen_project_logo_dualcolor_767x319.png" width="18%">
+  </picture>
+</div>
